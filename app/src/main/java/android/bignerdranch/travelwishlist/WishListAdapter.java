@@ -32,6 +32,7 @@ public class WishListAdapter extends RecyclerView.Adapter<WishListAdapter.WishLi
         LinearLayout layout;
         TextView nameTextView;
         TextView dateCreatedTextView;
+        TextView reasonTextView;
         
         WishListClickListener listener;
 
@@ -41,6 +42,7 @@ public class WishListAdapter extends RecyclerView.Adapter<WishListAdapter.WishLi
             this.layout = layout;
             nameTextView = layout.findViewById(R.id.place_name_text_view);
             dateCreatedTextView = layout.findViewById(R.id.date_created_text_view);
+            reasonTextView = layout.findViewById(R.id.place_reason_text_view);
             layout.setOnClickListener(this);
             layout.setOnLongClickListener(this);
         }
@@ -77,8 +79,8 @@ public class WishListAdapter extends RecyclerView.Adapter<WishListAdapter.WishLi
         // In Android terminology, bind the view and it's data
         Place place = data.get(position);
         holder.nameTextView.setText(place.getName());
+        holder.reasonTextView.setText(place.getReason());
 
-        // TODO Need to add "Created on" string resource
         holder.dateCreatedTextView.setText(place.getDateCreated());
     }
 

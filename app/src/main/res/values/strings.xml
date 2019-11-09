@@ -5,4 +5,5 @@
     <string name="delete_place_message">Delete %1$s</string>
     <string name="delete_dialog_title">Delete place?</string>
     <string name="date_created_text">Created on</string>
+    <string name="reason_why_text">Why?</string>
 </resources>
